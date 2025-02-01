@@ -3,149 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Historia Interactiva</title>
+    <title>Juego gacha</title>
     <style>
-        /* General styles */
-        body {
-            font-family: 'Roboto', Arial, sans-serif;
-            line-height: 1.8;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(180deg, #f0f8ff, #e6f7ff);
-            color: #333;
-        }
-
-        /* Header styles */
-        header {
-            background: linear-gradient(135deg, #1e90ff, #00bfff);
-            color: #fff;
-            padding: 30px 20px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border-bottom: 5px solid #007bff;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 3em;
-            font-weight: bold;
-        }
-
-        /* Container styles */
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 30px;
-            background: #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        h2 {
-            font-size: 2em;
-            margin-bottom: 20px;
-            color: #1e90ff;
-            border-bottom: 2px solid #1e90ff;
-            padding-bottom: 10px;
-        }
-
-        /* Chapter link styles */
-        .capitulo {
-            margin: 20px 0;
-        }
-
-        .capitulo a {
-            display: block;
-            font-size: 1.3em;
-            color: #007bff;
-            text-decoration: none;
-            padding: 15px 20px;
-            border-radius: 10px;
-            background: #f0f8ff;
-            border: 2px solid #007bff;
-            transition: all 0.3s ease;
-            text-align: center;
-            max-width: 300px;
-            margin: 0 auto;
-        }
-
-        .capitulo a:hover {
-            background: #007bff;
-            color: #ffffff;
-            transform: scale(1.05);
-        }
-
-        /* Chapter content styles */
-        #contenidoCapitulo {
-            margin-top: 30px;
-            padding: 25px;
-            background: #f9f9f9;
-            border-left: 8px solid #1e90ff;
-            border-radius: 10px;
-            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-            animation: fadeIn 0.5s ease;
-        }
-
-        #contenidoCapitulo h3 {
-            margin-top: 0;
-            color: #1e90ff;
-            font-size: 1.8em;
-        }
-
-        /* Animation for content */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Responsive design */
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 2em;
-            }
-
-            h2 {
-                font-size: 1.5em;
-            }
-
-            .capitulo a {
-                font-size: 1em;
-                padding: 10px 15px;
-            }
-
-            #contenidoCapitulo {
-                padding: 15px;
-            }
-        }
+        body { font-family: Arial, sans-serif; margin: 20px; padding: 20px; }
+        h1, h2 { color: #333; }
+        .section { margin-bottom: 20px; }
     </style>
 </head>
 <body>
-    <header>
-        <h1>genshin impact</h1>
-    </header>
-    <div class="container">
-        <h2>Capítulos</h2>
-        <div class="capitulo">
-            <a href="#" onclick="mostrarCapitulo(1)">Capítulo 1: el inicio de una aventura</a>
-        </div>
-        <div id="contenidoCapitulo"></div>
+    <h1>Juego de Aventura Gacha</h1>
+    
+    <div class="section">
+        <h2>Mecánicas</h2>
+        <ul>
+            <li><strong>Exploración:</strong> Descubre un mundo abierto lleno de secretos, usa tu barra de resistencia para correr, nadar, escalar y planear pero recuerda que tiene un limite.</li>
+            <li><strong>Combate:</strong> usa reacciones elementales para hacer mas daño.</li>
+            <li><strong>gacha:</strong> Obtén nuevos personajes mediante el sistema gacha.</li>
+            <li><strong>Misiones:</strong> Completa misiones para obtener recompensas y avanzar en la historia.</li>
+        </ul>
     </div>
-
-    <script>
-        const capitulos = {
-            1: "Dos viajeros gemelos, una chica y un chico llamados Lumine y Aether, tienen la capacidad de viajar entre mundos. En uno de sus viajes, una deidad desconocida apareció de repente y los enfrentó. A pesar de luchar con valentía, fueron derrotados por esta deidad. Como resultado, ambos fueron transportados a un mundo llamado Teyvat, pero terminaron separados. Aether, el gemelo, se despierta en un lugar desconocido y decide buscar alimento. Mientras pesca, inesperadamente atrapa a una pequeña criatura flotante llamada Paimon. Aether y Paimon se hacen amigos, y esta última le explica el mundo de Teyvat. Le cuenta que está formado por siete naciones, cada una bajo la protección de un arconte (dios) que controla un elemento específico. Actualmente, se encuentran en la nación de la libertad, conocida como Mondstadt. Mientras se dirigen a la capital de Mondstadt, Aether recibe el poder del elemento Anemo, que es el elemento del arconte de esta región. Sin embargo, en el camino, se topan con un dragón que parece estar acompañado por un joven misterioso. El dragón, al percibir el poder de Aether, se aleja rápidamente, y el joven desaparece. Más adelante, en el camino, una joven caballera de la Orden de Favonius se cruza con ellos. Se presenta y, tras conocer sus intenciones, decide llevarlos a la capital, mostrándoles la impresionante ciudad de Mondstadt."
-        };
-
-        function mostrarCapitulo(numero) {
-            const contenidoDiv = document.getElementById('contenidoCapitulo');
-            contenidoDiv.innerHTML = `<h3>Capítulo ${numero}</h3><p>${capitulos[numero]}</p>`;
-        }
-    </script>
+    
+    <div class="section">
+        <h2>Personajes</h2>
+        <ul>
+            <li>
+                <strong>lumine (predeterminado)</strong>
+                <ul>
+                    <li><strong>Elemento:</strong> anemo</li>
+                    <li><strong>Básicos:</strong> Daño: 115, usa Espada ligera</li>
+                    <li><strong>Habilidad Elemental:</strong> hace un orbe anemo que absorve a los enemigos alrededor haciendo daño, Daño: 180, CD: 6s</li>
+                    <li><strong>Ulti:</strong> hace un tornado que se puede invuir de otros elementos como(pyro, hydro, cryo, electro) y junta a los enemigos, Daño: 225, CD: 16s, Energía necesaria: 60</li>
+                </ul>
+            </li>
+            <li>
+                <strong>amber (4 estrellas)</strong>
+                <ul>
+                    <li><strong>Elemento:</strong> pyro</li>
+                    <li><strong>Básicos:</strong> Daño: 100, usa arco</li>
+                    <li><strong>Habilidad Elemental:</strong> invoca un muñeco que distrae a los enemigos durante 4s y despues explota, Daño: 200, CD: 12ss</li>
+                    <li><strong>Ulti:</strong> invoca una lluvia de flechas pyro, Daño: 230, CD: 21s, Energía necesaria: 60</li>
+                </ul>
+            </li>
+            <li>
+                <strong>lisa (4 estrellas)</strong>
+                <ul>
+                    <li><strong>Elemento:</strong> electro</li>
+                    <li><strong>Básicos:</strong> Daño: 105, usa catalizador</li>
+                    <li><strong>Habilidad Elemental:</strong> tira una bola electro, Daño: 130, CD: 1s</li>
+                    <li><strong>Habilidad cargada:</strong> tira un rayo que afecta a varios enemigos, Daño: 200, CD: 9sCD</li>
+                    <li><strong>Ulti:</strong> hace una zona electrificada que invuye de rayo a los enemigos dentro, Daño: 300, CD: 20s, Energía necesaria: 70</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2>Versión</h2>
+        <p><strong>Última actualización:</strong> Versión 1.0</p>
+        <p><strong>Novedades:</strong></p>
+        <ul>
+            <li>Nuevo terreno: reino de los lobos.</li>
+            <li>nuevo jefe: boreas</li>
+        </ul>
+    </div>
 </body>
 </html>
