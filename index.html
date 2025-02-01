@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historia Interactiva</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(180deg, #f0f8ff, #e6f7ff);
+            color: #333;
+        }
+
+        /* Header styles */
+        header {
+            background: linear-gradient(135deg, #1e90ff, #00bfff);
+            color: #fff;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-bottom: 5px solid #007bff;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            font-weight: bold;
+        }
+
+        /* Container styles */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #1e90ff;
+            border-bottom: 2px solid #1e90ff;
+            padding-bottom: 10px;
+        }
+
+        /* Chapter link styles */
+        .capitulo {
+            margin: 20px 0;
+        }
+
+        .capitulo a {
+            display: block;
+            font-size: 1.3em;
+            color: #007bff;
+            text-decoration: none;
+            padding: 15px 20px;
+            border-radius: 10px;
+            background: #f0f8ff;
+            border: 2px solid #007bff;
+            transition: all 0.3s ease;
+            text-align: center;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .capitulo a:hover {
+            background: #007bff;
+            color: #ffffff;
+            transform: scale(1.05);
+        }
+
+        /* Chapter content styles */
+        #contenidoCapitulo {
+            margin-top: 30px;
+            padding: 25px;
+            background: #f9f9f9;
+            border-left: 8px solid #1e90ff;
+            border-radius: 10px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.5s ease;
+        }
+
+        #contenidoCapitulo h3 {
+            margin-top: 0;
+            color: #1e90ff;
+            font-size: 1.8em;
+        }
+
+        /* Animation for content */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            .capitulo a {
+                font-size: 1em;
+                padding: 10px 15px;
+            }
+
+            #contenidoCapitulo {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>genshin impact</h1>
+    </header>
+    <div class="container">
+        <h2>Capítulos</h2>
+        <div class="capitulo">
+            <a href="#" onclick="mostrarCapitulo(1)">Capítulo 1: el inicio de una aventura</a>
+        </div>
+        <div id="contenidoCapitulo"></div>
+    </div>
+
+    <script>
+        const capitulos = {
+            1: "Dos viajeros gemelos, una chica y un chico llamados Lumine y Aether, tienen la capacidad de viajar entre mundos. En uno de sus viajes, una deidad desconocida apareció de repente y los enfrentó. A pesar de luchar con valentía, fueron derrotados por esta deidad. Como resultado, ambos fueron transportados a un mundo llamado Teyvat, pero terminaron separados. Aether, el gemelo, se despierta en un lugar desconocido y decide buscar alimento. Mientras pesca, inesperadamente atrapa a una pequeña criatura flotante llamada Paimon. Aether y Paimon se hacen amigos, y esta última le explica el mundo de Teyvat. Le cuenta que está formado por siete naciones, cada una bajo la protección de un arconte (dios) que controla un elemento específico. Actualmente, se encuentran en la nación de la libertad, conocida como Mondstadt. Mientras se dirigen a la capital de Mondstadt, Aether recibe el poder del elemento Anemo, que es el elemento del arconte de esta región. Sin embargo, en el camino, se topan con un dragón que parece estar acompañado por un joven misterioso. El dragón, al percibir el poder de Aether, se aleja rápidamente, y el joven desaparece. Más adelante, en el camino, una joven caballera de la Orden de Favonius se cruza con ellos. Se presenta y, tras conocer sus intenciones, decide llevarlos a la capital, mostrándoles la impresionante ciudad de Mondstadt."
+        };
+
+        function mostrarCapitulo(numero) {
+            const contenidoDiv = document.getElementById('contenidoCapitulo');
+            contenidoDiv.innerHTML = `<h3>Capítulo ${numero}</h3><p>${capitulos[numero]}</p>`;
+        }
+    </script>
+</body>
+</html>
